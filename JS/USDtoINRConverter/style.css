@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+h4{
+    color: #131007;
+    margin: 10px;
+    text-shadow: 4px 3px 10px #6c6c68;
+    font-size: 2rem;
+}
+.currencyChange__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: url(./bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 1.5rem;
+}
+.currencyChange__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.currencyChange__row {
+    /* display: flex; */
+    justify-content: space-between;
+    margin: 1rem;
+    align-items:baseline;
+}
+.currencyChange__box {
+    margin: 15px;
+}
+
+
+input {
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    color:#000;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.btn {
+    transition: var(--transition);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    border: none;
+    font-size: 1rem;;
+}
+.currencyChange__wrapper-btn{
+    border: none;
+    background: rgb(234 220 171);
+    background: linear-gradient(0deg, rgb(156 124 68) 0%, rgb(246 233 189) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.currencyChange__wrapper-btn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.currencyChange__wrapper-btn:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.currencyChange__wrapper-btn:hover {
+    opacity: .7;
+}
+
+.currencyChange__wrapper-btn:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+    
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Exo', sans-serif;
+    background: url(./bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #000;
+    font-size: 1.2rem;
+    color:#000;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.cgpaConverter__container{
+    width:90%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: rgba( 255, 255, 255, 0.4 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cgpaConverter__row {
+    width: 100%;
+}
+.cgpaConverter__wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.cgpaConverter__wrapper input{
+    margin: 1rem 0;
+}
+.cgpaConverter__wrapper-heading{
+    margin-bottom: 1.5rem;
+}
+/* !mediaQuery */
+@media only screen and (min-width:768px){
+    .cgpaConverter__wrapper{
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+    .cgpaConverter__wrapper-heading{
+        margin-bottom: 0;
+    }
+    .space{
+        margin: 4rem 0;
+    }
+}

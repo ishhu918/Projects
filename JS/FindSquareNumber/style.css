@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+:root{
+    --transition: all 0.1s ease;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./rr.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: var(--transition);
+}
+
+.square__numberContainer {
+    background-color: rgb(106 187 188);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(106, 187, 188, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16.5px);
+    -webkit-backdrop-filter: blur(16.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255);
+    transition: var(--transition);
+}
+@media only screen and (max-width: 768px) {
+    .square__numberContainer{
+        width:calc(100% - 10%);
+    }
+}
+
+.square__number {
+    padding: 20px;
+    width: 90%;
+}
+
+.square__numberInput {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid white;
+    width: 60%;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    transition: var(--transition);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    border: none;
+    font-size: 1rem;;
+}
+
+.square__number-btn {
+    border: none;
+    background: rgb(78, 164, 163);
+    background: linear-gradient(0deg, rgba(78, 164, 163) 0%, rgba(78, 164, 163, 1) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+
+.square__number-btn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.square__number-btn:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.square__number-btn:hover {
+    opacity: .7;
+}
+
+.square__number-btn:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+    
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.square__number-text{
+    transition: var(--transition);
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+/* -============================= */

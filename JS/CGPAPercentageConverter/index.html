@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA to Percentage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="cgpaConverter__container">
+        <div class="cgpaConverter__row">
+            <div class="cgpaConverter__wrapper cgpa">
+                <h2 class="cgpaConverter__wrapper-heading">CGPA to Percentage</h2>
+                CGPA: <input type="number" class="cgpaConverter__wrapper-cgpa" id="cgpa" oninput="convertCgpa()" placeholder="Enter Your CGPA">
+                Percentage: <input type="number" class="cgpaConverter__wrapper-percentage" id="percentage" disabled>
+            </div>
+            <div class="space"></div>
+            <div class="cgpaConverter__wrapper percentage">
+                <h2 class="cgpaConverter__wrapper-heading">Percentage to CGPA</h2>
+                Percentage: <input type="number" class="cgpaConverter__wrapper-percentage" oninput="convertPercentage()" placeholder="Enter Your Percentage" id="Cpercentage" >
+                CGPA: <input type="number" class="cgpaConverter__wrapper-cgpa" id="Pcgpa" disabled>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

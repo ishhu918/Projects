@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>AddEvent Listener - click event</title>
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: black;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid orange;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      button.active {
+        color: black;
+        border: 2px solid #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>On</button>
+
+    <script>
+      var a = document.querySelector(".circle");
+      var b = document.querySelector("button");
+      var c = document.querySelector("body");
+      var flag = 0;
+
+      b.addEventListener("click", () => {
+        if (flag == 0) {
+          flag = 1;
+          b.textContent = "Off";
+          b.classList.add("active");
+          c.style.backgroundColor = `white`;
+        } else {
+          flag = 0;
+          b.textContent = "On";
+          b.classList.remove("active");
+          c.style.backgroundColor = `black`;
+        }
+      });
+    </script>
+  </body>
+</html>

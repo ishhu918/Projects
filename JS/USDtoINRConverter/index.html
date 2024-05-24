@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>USD to INR Converter</title>
+</head>
+<body>
+    <div class="currencyChange__container">
+        <div class="currencyChange__wrapper">
+            <h2 class="currencyChange__wrapper-heading">USD to INR</h2>
+            <div class="currencyChange__row">
+                <div class="currencyChange__box">
+                    <input type="number" id="usdCurrency"> USD
+                    <!-- <h4>USD</h4> -->
+                </div><br><br>
+                <!-- <h2>To</h2> -->
+                <div class="currencyChange__box">
+                    <input type="number" id="inrCurrency" disabled> INR
+                    <!-- <h4>INR</h4> -->
+                </div>
+            </div>
+            <button class="btn currencyChange__wrapper-btn" onclick="convertCurrency()"><span>Convert</span></button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
