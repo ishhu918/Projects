@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Digital V-card </title>
+    <!-- font awesome 5 icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style type="text/css">
+        /* NOTE: global css start */
+    *{margin: 0;padding: 0;font-family: 'Poppins', sans-serif;}
+    body{background: url('img/bg.jpg');-webkit-background-size: cover; background-repeat: no-repeat; background-size: cover; background-repeat: no-repeat;padding-bottom: 4em;}
+    a{text-decoration: none;}
+    p{text-align: justify;}
+
+    /* scroll bar start */
+
+    /* width */
+::-webkit-scrollbar {
+width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey;
+border-radius: 10px;
+/*background: #E41E17;*/
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #E41E17;
+background:#c57f06;
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #b30000;
+}
+    /* scroll bar end */
+
+    table.sec-container{
+      max-width: 602px;
+      width: 100%;
+      margin: 2.5em auto;
+      border: 10px solid #FC0D00;
+      border-style: ridge;
+      padding: 2.5em 0.5em;
+      background: #fff;
+    }
+    table.inner-table{
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    .main-heading{
+      margin-top:2px;
+      margin-bottom: 0.7em;
+      font-size:1.8em;
+      background: #E41E17;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(14,27,35,.25);
+  box-shadow: 0 9px 16px rgb(14 27 35 / 27%);
+  border-radius: 2em 0em;
+    }
+    .sub-heading{
+      margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 1.3em;
+  color: #E41E17;
+  text-decoration: underline wavy #E41E17;
+    }
+    .row-space{
+      padding: 1em 0;
+    }
+    /* NOTE: global css end */
+    /* NOTE: section 1 start */
+    .quick-btn{
+      font-weight: 500;
+          font-size: 0.8em;
+          padding: 0.5em 0.8em;
+          margin-top: 5px;
+          display: inline-block;
+          background: linear-gradient(to bottom, #FFA200 0%, #c57f06 100%);
+          border-radius: 18px;
+          color: #fff;
+          /* box-shadow: 0 6px 9px rgba(14,27,35,.35); */
+    }
+    .quick-btn:hover{
+      transition: all 0.8s ease;
+          box-shadow: 0 0 4px rgba(14,27,35,.35);
+          text-shadow:0 5px 10px rgba(14,27,35,.25);
+          cursor: pointer;
+    }
+    .inline-adrs {
+  padding-top: 5px;
+  padding-bottom: 5px;
+    }
+    .inline-adrs a{
+      color: #E41E17;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    }
+    .crtificate-table table tr td{
+      padding: 0.2em;
+    }
+    /* NOTE: section 1 end */
+    /* NOTE: section 3 start */
+    .product-list{
+      list-style-type: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0;
+    }
+    .product-list li{
+      padding: 0em;
+      margin: 0.2em;
+          line-height: 1.4em;
+          margin: 0.5em 0;
+          color: #c57f06;
+          font-weight: 600;
+              font-size: 0.7em;
+    }
+    .product-list li:before{
+      content: "》";
+          display: inline-block;
+          margin-left: 0.1em;
+          width: 0.4em;
+          color: #E41E17;
+          font-weight: 600;
+          margin-right: 0.4em;
+
+    }
+
+    /* slider start */
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text and img */
+
+    .mySlides img{
+      height:300px;
+      width: 580px;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #E41E17;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-weight: 600;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height:0.5em;
+      width: 0.5em;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+       /* NOTE: section 3 end */
+       /* NOTE: section 5 start */
+       input, textarea{
+         padding: 1em;
+  border: 3px double #E41E17;
+  margin: 0.4em 0;
+       }
+       input:focus, textarea:focus{
+         transition: all 0.5s ease;
+         border: 3px ridge #E41E17;
+         outline: none;
+       }
+       input:focus, textarea:focus, select:focus{
+      outline: none;
+  }
+       /* NOTE: section 5 end */
+    /* NOTE: footer start */
+    footer{
+      position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -7px 16px rgb(14 27 35 / 27%);
+    }
+  footer  .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  /* background-color: #fff; */
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+footer .flex-container > div {
+  /* background-color: #f1f1f1; */
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  font-size: 0.8em;
+
+}
+footer .flex-container > div a{
+  text-decoration: none;
+
+}
+footer .flex-container > div ul{
+  list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #E41E17;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(14,27,35,.25);
+  box-shadow: 0 9px 16px rgb(14 27 35 / 27%);
+  border-radius: 2em 0em;
+
+}
+    /* NOTE: footer end */
+    /* media query start */
+
+    /* media query end */
+  </style>
+</head>
+<body>
+  <div style="padding:1.5em">
+  <!-- NOTE: sectoin 1 start -->
+  <table border="0" cellspacing="0" cellpadding="0" class="sec-container" id="sec1" align="center">
+    <!-- logo start -->
+    <tr align="center">
+      <td><a href="index.html"><img src="img/logo.svg" alt="logo" width="200px;"></a></td>
+    </tr>
+    <!-- logo end -->
+    <!-- brand name -->
+    <tr align="center">
+      <td>
+        <h1 style="margin-top:2px;margin-bottom: 2px;font-size:1.8em;"></h1>
+        <h3 style="margin-top:2px;margin-bottom: 2px;font-size:1em;">(Authorised Distributor)</h3>
+      </td>
+    </tr>
+    <!-- brand end -->
+    <!-- quick buttun start -->
+    <tr>
+      <td>
+        <table width="100%" cellspacing="0" cellpadding="0" class="inner-table">
+          <tr align="center">
+            <td><a href="tel:+91-9876543210" class="quick-btn"><i class="fas fa-phone-alt" style="margin-right: 0.5em;"></i> Call</a></td>
+            <td><a href="#" class="quick-btn"><i class="fas fa-map-marked-alt"  style="margin-right: 0.5em;"></i> Reach us</a></td>
+            <td><a href="mailto:test@gmail.com" class="quick-btn"><i class="fas fa-envelope-open"  style="margin-right: 0.5em;"></i> E-mail</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- quick buttun end -->
+    <!-- address info start -->
+    <tr style="background: url('img/bg1.png'); background-size: 49%;background-position: right;background-repeat: no-repeat;">
+      <td>
+        <table  style="padding: 1em;" width="100%">
+          <tr>
+            <td class="inline-adrs"><a href="http://shop.indiaetrading.com"><i class="fab fa-internet-explorer" style="margin-right: 0.5em;"></i> www.site.com</a></td>
+          </tr>
+          <tr>
+            <td class="inline-adrs"><a href="tel:+91-9876543210"><i class="fas fa-phone-alt"  style="margin-right: 0.5em;"></i> +91-9876543210</a></td>
+          </tr>
+          <tr>
+            <td class="inline-adrs"><a href="mailto:test@gmail.com"><i class="fas fa-envelope-open"  style="margin-right: 0.5em;"></i>test@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td class="inline-adrs"><a href="#"><i class="fas fa-map-marked-alt"  style="margin-right: 0.5em;"></i> Address</a></td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+      <!-- address info end -->
+      <!-- cerificates number start -->
+      <tr>
+        <td>
+          <table  style="padding: 1em;font-weight: 500;font-size: 0.8em;padding: 0.5em 0.8em;margin-top: 5px;background: linear-gradient(to bottom, #FFA200 0%, #c57f06 100%);border-radius: 18px;color: #fff;" width="100%">
+            <tr>
+              <td class="inline-adrs crtificate-table">
+                <table width="100%" align="center" style="font-size: 0.9em;">
+                  <tr>
+                    <td>GST NO. </td>
+                    <td>:</td>
+                    <td>9876543210HIPKOL</td>
+                  </tr>
+                  <tr>
+                    <td>FSSAI NO. </td>
+                    <td>:</td>
+                    <td>9876543210</td>
+                  </tr>
+                  <tr>
+                    <td>MSME NO. </td>
+                    <td>:</td>
+                    <td>9876543210</td>
+                  </tr>
+                  <tr>
+                    <td>IEC No. </td>
+                    <td>:</td>
+                    <td>HJ/KDFF/FHJHHI/JJG</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+      </tr>
+      <!-- cerificates number end -->
+  </table>
+  <!-- NOTE: sectoin 1 end -->
+  <!-- NOTE: sectoin 2 start -->
+  <table border="0" cellspacing="0" cellpadding="0" class="sec-container" id="sec2" align="center">
+    <!-- heading name -->
+    <tr align="center">
+      <td>
+        <h1 class="main-heading">About us</h1>
+      </td>
+    </tr>
+    <!-- heading end -->
+    <!-- about us lines start -->
+    <tr>
+      <td>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ratione blanditiis perferendis aut fugiat? Quasi itaque, dolorem minima atque numquam deleniti recusandae sint iure iusto blanditiis repellendus soluta dicta? Sunt! </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, deserunt! Impedit, error possimus officia minima maiores numquam deleniti unde, hic, nesciunt repellat blanditiis. Assumenda, laboriosam? Quam ipsa ullam distinctio illum aut omnis rem non sint amet doloribus aspernatur blanditiis, libero explicabo recusandae laudantium, accusamus fugiat provident sed minus? Voluptates soluta maxime vel aliquid qui.</p>
+      </td>
+    </tr>
+    <tr>
+      <td  class="row-space"><h2 class="sub-heading">Our Mission</h2></td>
+    </tr>
+    <tr>
+      <td> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque ipsa fuga voluptatem eos odit exercitationem, dolor, voluptatum at obcaecati beatae earum nam libero aspernatur impedit minus dolores distinctio laborum voluptas. Libero aspernatur placeat id fuga ab minus quis deleniti similique voluptate, velit autem nihil sed perferendis labore pariatur molestias eius ut magni. Corporis expedita debitis sed ipsam, veritatis perspiciatis nemo!</p></td>
+    </tr>
+    <tr>
+      <td  class="row-space"><h2 class="sub-heading">Our Vision</h2></td>
+    </tr>
+    <tr>
+      <td> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minima totam iusto reiciendis laboriosam soluta expedita quidem ex nostrum eum molestiae, in culpa odio ratione fugiat tenetur hic dolor dignissimos recusandae illum tempora iure beatae dolores sequi? Voluptatibus, placeat ea!</p></td>
+    </tr>
+    <!-- about us lines end -->
+
+  </table>
+  <!-- NOTE: sectoin 2 end -->
+  <!-- NOTE: sectoin 3 start -->
+  <table border="0" cellspacing="0" cellpadding="0" class="sec-container" id="sec3" align="center">
+    <!-- heading name -->
+    <tr align="center">
+      <td>
+        <h1 class="main-heading">Our Products</h1>
+      </td>
+    </tr>
+    <!-- heading end -->
+    <!-- product slider start -->
+    <tr>
+      <td>
+        <div class="slideshow-container">
+
+      <div class="mySlides fade">
+      <div class="numbertext">1 / 17</div>
+      <img src="img/dabur 1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+      <div class="numbertext">2 / 17</div>
+      <img src="img/p2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+      <div class="numbertext">3 / 17</div>
+      <img src="img/p3.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">4 / 17</div>
+      <img src="img/p4.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">5 / 17</div>
+      <img src="img/p5.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">6 / 17</div>
+      <img src="img/p6.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">7 / 17</div>
+      <img src="img/p7.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">8 / 17</div>
+      <img src="img/p8.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">9 / 17</div>
+      <img src="img/p9.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">10 / 17</div>
+      <img src="img/p10.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">11 / 17</div>
+      <img src="img/p11.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">12 / 17</div>
+      <img src="img/p12.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">13 / 17</div>
+      <img src="img/p13.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">14 / 17</div>
+      <img src="img/p14.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">15 / 17</div>
+      <img src="img/p15.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">16 / 17</div>
+      <img src="img/p16.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+      <div class="numbertext">17 / 17</div>
+      <img src="img/p17.jpg" style="width:100%">
+      </div>
+
+
+      </div>
+      <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      </div>
+      </td>
+    </tr>
+    <!-- product slider end -->
+    <!-- product 1 start -->
+    <tr>
+      <td class="row-space">
+        <h2 class="sub-heading">Baidyanath Products</h2>
+        <ul class="product-list">
+          <li>Amla Juice</li>
+          <li>Karela Jamun Juice</li>
+          <li>Aloevera Juice</li>
+          <li>Triphla Juice</li>
+          <li>Giloy Juice</li>
+          <li>Wheat Grass Juice</li>
+          <li>Honey</li>
+          <li>Mahabhringraj Tel</li>
+          <li>Tulsi Ark</li>
+          <li>Amrit Tulsi</li>
+          <li>Kasamrita Cough Syrup</li>
+          <li>Ayush Kwath </li>
+          <li>Chyawanprash Special </li>
+          <li>Sugar Free Chyawan vit</li>
+          <li>Kesari Kalp</li>
+          <li>Rogan Badam Shirin</li>
+          <li>Sharbat </li>
+          <li>Gulkand</li>
+          <li>Churn </li>
+        </ul>
+      </td>
+    </tr>
+    <!-- product 1 end -->
+    <!-- product 2 start -->
+    <tr>
+      <td class="row-space">
+        <h2 class="sub-heading">Kapiva Products</h2>
+        <ul class="product-list">
+          <li>Wild Amla Juice</li>
+          <li>Wild Tulsi Giloy Juice</li>
+          <li>Karela Jamun Juice</li>
+          <li>Thar Aloevera Juice</li>
+          <li>Triphla Juice</li>
+          <li>Giloy Juice</li>
+          <li>Wheat Grass Juice</li>
+          <li>Honey</li>
+          <li>Kapiva A2 Desi Ghee</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- product 2 end -->
+    <!-- product 3 start -->
+    <tr>
+      <td class="row-space">
+        <h2 class="sub-heading">Himalaya  Products</h2>
+        <ul class="product-list">
+          <li>All Tablets</li>
+          <li>Cold Balm</li>
+          <li>AyurSlim Capsules</li>
+          <li>Green Tea</li>
+          <li>Baby Gift Pack </li>
+          <li>Quista pro kids</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- product 3 end -->
+    <!-- product 4 start -->
+    <tr>
+      <td class="row-space">
+        <h2 class="sub-heading">Dabur   Products</h2>
+        <ul class="product-list">
+          <li>Amla Juice</li>
+          <li>Aloevera Juice</li>
+          <li>Giloy Juice</li>
+          <li>Wheat Grass Juice</li>
+          <li>Honey</li>
+          <li>Tulsi Drop</li>
+          <li>Haldi Drop</li>
+          <li>Ayush Kwath </li>
+          <li>Chyawanprash Special </li>
+          <li>Sugar Free Chyawanprash</li>
+          <li>Ratan Prash Chyawanprash</li>
+          <li>Badam Oil</li>
+          <li>Churn & Tablets </li>
+        </ul>
+      </td>
+    </tr>
+    <!-- product 4 end -->
+
+
+  </table>
+  <!-- NOTE: sectoin 3 end -->
+  <!-- NOTE: sectoin 5 start -->
+  <table border="0" cellspacing="0" cellpadding="0" class="sec-container" id="sec5" align="center">
+    <!-- heading name -->
+    <tr align="center">
+      <td>
+        <h1 class="main-heading">Contact us</h1>
+      </td>
+    </tr>
+    <!-- heading end -->
+    <tr>
+      <td>
+        <input style="width: 90%;" type="text" id="name" name="name" placeholder="Your name..">
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input style="width: 90%;" type="email" id="email" name="email" placeholder="Your E-mail">
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input style="width: 90%;" type="tel" id="mobile" name="mobile" placeholder="Your Mobile..">
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <textarea style="width: 90%;" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit" value="Submit" class="quick-btn" style="border:none;">
+      </td>
+    </tr>
+
+  </table>
+  <!-- NOTE: sectoin 5 end -->
+</div>
+  <!-- NOTE: footer start -->
+  <footer>
+    <div class="flex-container">
+      <div><a href="#sec1"> <ul><li><i class="fas fa-home"></i></li><li>Home</li></ul> </a></div>
+      <div><a href="#sec2"> <ul><li><i class="fas fa-user-alt"></i></li><li>About</li></ul> </a></div>
+      <div><a href="#sec3"> <ul><li><i class="fab fa-buffer"></i></li><li>Product</li></ul> </a></div>
+     <!-- <div><a href="#sec4"> <ul><li><i class="fas fa-comments"></i></li><li>Feedback</li></ul> </a></div>-->
+      <div><a href="#sec5"> <ul><li><i class="fas fa-address-card"></i></li><li>Enquiry</li></ul> </a></div>
+
+
+    </div>
+  </footer>
+
+</body>
+<!-- slider js  -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+</html>
