@@ -1,0 +1,216 @@
+/*! Global CSS Start */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    transition: .5s;
+}
+section{padding: 10px; margin-top: 1.5em; margin-bottom: 1.5em;}
+.top-bar{background: rgb(35 40 45); color:rgb(255, 255, 255); margin: 0;}
+.top-bar a{color:rgb(255, 255, 255);}
+.top-bar a:hover{color:rgb(235 235 235);}
+.main-menu{padding: 10px;}
+.main-menu a{color: rgb(35 40 45);font-weight: 600;letter-spacing: 0.03em;}
+.main-menu a.nav-link.active, .main-menu a:hover{color: rgb(255 182 0);}
+.my-btn {
+       /* background: rgb(35 40 45); */
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    background: linear-gradient(to bottom, rgb(76 81 87) 0%, rgb(35 40 45) 100%);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0 0 0 / 20%);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0 0 0 / 20%);
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+    border: 5px ridge rgb(35 40 45);
+    border-radius: 0px 29px; 
+    transition: all 1s ease;
+}
+.my-btn a{color:rgb(255, 255, 255);text-decoration: none;}
+.my-btn:hover{transition: all 1s ease;box-shadow: none;border-style: double;cursor: pointer;}
+.my-btn:hover a{color: rgb(235 235 235);transition: all 1s ease;}
+a:hover{transition: all 0.5s ease; color: rgb(235 235 235);}
+footer{background: rgb(255 182 0);}
+footer a{color: rgb(35 40 45);}
+/* !Global CSS End  */
+/*! ########### Home Page CSS Start ########### */
+/* *slider start */
+  .carousel-inner img {
+    width: 100%;
+    height: 380px;
+    /* max-height: 100%; */
+    overflow: hidden;
+  }
+.slider-btm-part {
+    position: relative;
+    background: rgb(255 182 0);
+    padding: 1.5em 5em;
+    top: -3em;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+}
+.carousel-indicators {
+    bottom: 60px;
+}
+.carousel-caption {
+    bottom: 56px;
+}
+/* *slider end */
+/* *Below Welcome Section start */
+hr.heading-line {
+    margin-right: auto;
+    margin-top: 11px;
+    width: 20%;
+    border: 0;
+    height: 4px;
+    background: rgb(255 182 0);
+    margin-left: 9px;
+}
+.my-faq-tab{
+    background: rgb(35 40 45);
+}
+.my-faq-tab a{
+    color: #fff;
+}
+/* *Below Welcome Section end */
+/* *Number Banner Section start */
+.dark-bg{
+    background: rgb(35 40 45);
+    color: #fff;
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 3em;
+}
+.ylw-text{
+    color: rgb(255 182 0);
+}
+/* *Number Banner Section end */
+/* *Testimonial Section start */
+#carouselTestimonial img{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+#carouselTestimonial .carousel-testimonial-img{
+        width: 160px;
+    height: 160px;
+    text-align: center;
+}
+#carouselTestimonial .carousel-control-next-icon, #carouselTestimonial  .carousel-control-prev-icon {
+    background: rgb(255 182 0);
+    padding: 15px;
+}
+
+/* *Testimonial Section end */
+/* *Cards Section end */
+.feature-cards .gr-1 {
+  background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+      background: linear-gradient(170deg, rgb(27 28 29) 0%, rgb(59 72 85) 100%);
+}
+
+.feature-cards .gr-2 {
+  background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+   background: linear-gradient(170deg, rgb(27 28 29) 0%, rgb(59 72 85) 100%);
+}
+
+.feature-cards .gr-3 {
+  background: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+   background: linear-gradient(170deg, rgb(27 28 29) 0%, rgb(59 72 85) 100%);
+}
+
+
+.feature-cards .align-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.feature-cards .column {
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+.feature-cards .column:hover {
+  padding-left: 0;
+}
+.feature-cards .column:hover .card .txt {
+  margin-left: 1rem;
+}
+.feature-cards .column:hover .card .txt h1, .column:hover .card .txt p {
+  color: white;
+  opacity: 1;
+}
+.feature-cards .column:hover a {
+  color: white;
+}
+.feature-cards .column:hover a:after {
+  width: 10%;
+}
+
+.feature-cards .card {
+  min-height: 170px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: rgb(255 182 0);
+  letter-spacing: .05rem;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+}
+.feature-cards .card .txt {
+  margin-left: -3rem;
+  z-index: 1;
+}
+.feature-cards .card .txt h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.feature-cards .card .txt p {
+  font-size: .7rem;
+  letter-spacing: 0rem;
+  margin-top: 33px;
+  opacity: 0;
+  color: white;
+}
+.feature-cards .card a {
+  z-index: 3;
+  font-size: .7rem;
+  color: rgb(255 182 0);
+  margin-left: 1rem;
+  position: relative;
+  bottom: -.5rem;
+  text-transform: uppercase;
+}
+.feature-cards .card a:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  width: 0;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid white;
+  transition: .5s;
+}
+.feature-cards .card .ico-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.feature-cards .card i {
+  position: relative;
+  right: -50%;
+  top: 60%;
+  font-size: 12rem;
+  line-height: 0;
+  opacity: .2;
+  color: white;
+  z-index: 0;
+}
+
+/* *Cards Section end */
+/*! ########### Home Page CSS End ########### */
