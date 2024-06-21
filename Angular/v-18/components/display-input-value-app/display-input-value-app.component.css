@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 0.5rem 1rem;
+  padding-top: 0.2rem;
+  background-color: #f8f3f3;
+}
+.wrapper__btns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 250px;
+}
+input {
+  height: 2rem;
+}
+button {
+  background-color: darkolivegreen;
+  color: #fff;
+  cursor: pointer;
+}
+textarea {
+  width: -webkit-fill-available;
+  resize: none;
+}

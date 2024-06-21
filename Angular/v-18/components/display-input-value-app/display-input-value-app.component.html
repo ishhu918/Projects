@@ -1,0 +1,10 @@
+<hr />
+<div class="wrapper">
+  <h1>{{ appTitle }}</h1>
+  <div class="wrapper__btns">
+    <input #aa type="text" placeholder="Enter text" />
+    <button (click)="getValue(aa)">get value</button>
+  </div>
+  <br>
+  <textarea disabled >Entered text: {{displayValue}} </textarea>
+</div>
