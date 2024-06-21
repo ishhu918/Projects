@@ -1,0 +1,12 @@
+<div class="counter">
+  <h1>{{ appTitle }}</h1>
+  <h2 class="counter__count">{{ count }}</h2>
+  <div class="counter__btns">
+    <div class="counter__btn counter__btn--add">
+      <span (click)="counter('add')">+</span>
+    </div>
+    <div class="counter__btn counter__btn--minus">
+      <span (click)="counter('minus')">-</span>
+    </div>
+  </div>
+</div>
